@@ -1,0 +1,30 @@
+{{define "post"}}
+<!DOCTYPE html>
+<html>
+    <head>
+        {{template "_header"}}
+    </head>
+    <body>
+        {{template "nav"}}
+        <!-- about me -->
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h1>{{.title}}</h1>
+                    <!-- card image -->
+                    <div class="card mb-3">
+                        <img src="https://source.unsplash.com/random/800x400" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">{{.post.Title}}</h5>
+                            <p class="card-text">{{.post.Content}}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        {{template "_footer"}}
+    </body>
+</html>
+{{end}}
+
